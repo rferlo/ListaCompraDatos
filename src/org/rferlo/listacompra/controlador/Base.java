@@ -60,5 +60,19 @@ public class Base {
 			return null;
 		}
 	}
+	
+	public static Vector<Unidad> getListaUnidadesEmpiezaPor(String cadena) {
+		Vector<Unidad> v = new Vector<Unidad>();
+		if(null != listaUnidades && !listaUnidades.isEmpty()) {
+			for(Unidad u: listaUnidades) {
+				if(u.empiezapor("g")) {
+					v.add(u);
+				}
+			}
+			return v;
+		} else {
+			return null;
+		}
+	}
 
 }
