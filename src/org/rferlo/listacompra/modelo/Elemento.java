@@ -9,6 +9,7 @@ import java.util.Vector;
  */
 public class Elemento {
 	
+	public static String CADENA_ELEMENTO_VACIO = "*** ELEMENTO VACIO ***";
 	/**
 	 * El nombre del elemento 
 	 */
@@ -63,7 +64,33 @@ public class Elemento {
 		this.categorias = categorias;
 	}
 	
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		// Si el nombre contiene algo lo añadimos
+		if(null != nombre) {
+			sb.append(nombre);
+		}
+		// Si tiene categorias las leemos y
+		// las montamos en el formato Nombre/Abrev
+		if(null != categorias) {
+			sb.append(" (");
+			for(Categoria cat: categorias) {
+				sb.append(" " + cat.getNombre() + "/" + cat.getAbreviatura());
+			}
+			sb.append(" )");
+		}
+		// Comprobamos si hay algo que devolver y 
+		// si no el texto predefinido
+		if(sb.toString().length() == 0) {
+			return Elemento.CADENA_ELEMENTO_VACIO;
+		} else {
+			return sb.toString();
+		}
+	}
 	
 	
 	
