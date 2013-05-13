@@ -19,6 +19,11 @@ public class Elemento {
 	 */
 	private Vector<Categoria> categorias;
 	
+	/**
+	 * La unidad preferida para el elemento
+	 */
+	private Unidad unidadpreferida;
+	
 
 	/**
 	 * Añade una categoria al elemento
@@ -63,7 +68,15 @@ public class Elemento {
 	public void setCategorias(Vector<Categoria> categorias) {
 		this.categorias = categorias;
 	}
-	
+
+	public Unidad getUnidadpreferida() {
+		return unidadpreferida;
+	}
+
+	public void setUnidadpreferida(Unidad unidadpreferida) {
+		this.unidadpreferida = unidadpreferida;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */

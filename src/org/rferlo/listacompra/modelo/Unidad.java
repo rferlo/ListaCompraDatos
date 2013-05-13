@@ -3,7 +3,7 @@ package org.rferlo.listacompra.modelo;
 
 /**
  * @author rferlo
- * 
+ * Unidades para asignar a los elementos
  */
 public class Unidad {
 	
