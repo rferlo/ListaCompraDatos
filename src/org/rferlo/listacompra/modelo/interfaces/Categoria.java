@@ -1,4 +1,4 @@
-package org.rferlo.listacompra.modelo;
+package org.rferlo.listacompra.modelo.interfaces;
 
 /**
  * @author rferlo
@@ -23,16 +23,6 @@ public interface Categoria {
 	 * @param abreviatura de la categoria
 	 */
 	public void setAbreviatura(String abreviatura);
-	/**
-	 * @param cadena a comparar
-	 * @return true si el nombre o la abreviatura comienza por cadena
-	 */
-	public boolean empiezapor(String cadena);
-	/**
-	 * @param cadena a comparar
-	 * @return true si el nombre o la abreviatura contienen la cadena
-	 */
-	public boolean contiene(String cadena);
 	
 
 }

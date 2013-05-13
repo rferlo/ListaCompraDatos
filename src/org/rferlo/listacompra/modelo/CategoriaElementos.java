@@ -1,11 +1,14 @@
 package org.rferlo.listacompra.modelo;
 
+import org.rferlo.listacompra.modelo.interfaces.Categoria;
+import org.rferlo.listacompra.modelo.interfaces.Localizable;
+
 /**
  * @author rferlo
  * Categoría a la que pertenecen los elementos
  * Nota: Cada elemento puede pertenecer a N categorías
  */
-public class CategoriaElementos implements Categoria{
+public class CategoriaElementos implements Categoria, Localizable{
 
 	/**
 	 * Nombre de la categoría 

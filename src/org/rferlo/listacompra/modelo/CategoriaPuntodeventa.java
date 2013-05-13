@@ -3,11 +3,14 @@
  */
 package org.rferlo.listacompra.modelo;
 
+import org.rferlo.listacompra.modelo.interfaces.Categoria;
+import org.rferlo.listacompra.modelo.interfaces.Localizable;
+
 /**
  * @author Rafa
  *
  */
-public class CategoriaPuntodeventa implements Categoria {
+public class CategoriaPuntodeventa implements Categoria, Localizable {
 
 	private String nombre;
 	private String abreviatura;
