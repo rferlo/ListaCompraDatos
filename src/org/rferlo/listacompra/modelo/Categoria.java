@@ -2,39 +2,37 @@ package org.rferlo.listacompra.modelo;
 
 /**
  * @author rferlo
- * Categoría a la que pertenecen los elementos
- * Nota: Cada elemento puede pertenecer a N categorías
+ * El interface para las categorias de todo tipo
  */
-public class Categoria {
-
-	/**
-	 * Nombre de la categoría 
-	 */
-	private String nombre;
+public interface Categoria {
+	
 	
 	/**
-	 * Abreviatura de la categoría 
+	 * @return Nombre de la categoria
 	 */
-	private String abreviatura;
+	public String getNombre();
+	/**
+	 * @return Abreviatura de la categoria
+	 */
+	public String getAbreviatura();
+	/**
+	 * @param Nombre para la categoria
+	 */
+	public void setNombre(String nombre);
+	/**
+	 * @param abreviatura de la categoria
+	 */
+	public void setAbreviatura(String abreviatura);
+	/**
+	 * @param cadena a comparar
+	 * @return true si el nombre o la abreviatura comienza por cadena
+	 */
+	public boolean empiezapor(String cadena);
+	/**
+	 * @param cadena a comparar
+	 * @return true si el nombre o la abreviatura contienen la cadena
+	 */
+	public boolean contiene(String cadena);
+	
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getAbreviatura() {
-		return abreviatura;
-	}
-
-	public void setAbreviatura(String abreviatura) {
-		this.abreviatura = abreviatura;
-	}
-	
-	
-	
-	
-	
 }

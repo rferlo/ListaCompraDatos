@@ -17,7 +17,7 @@ public class Elemento {
 	/**
 	 * Categorias a las que pertenece el elemento
 	 */
-	private Vector<Categoria> categorias;
+	private Vector<CategoriaElementos> categorias;
 	
 	/**
 	 * La unidad preferida para el elemento
@@ -29,10 +29,10 @@ public class Elemento {
 	 * Añade una categoria al elemento
 	 * @param cat
 	 */
-	public void anadeCategoria(Categoria cat) {
+	public void anadeCategoria(CategoriaElementos cat) {
 		// Comprobar si el vector está instanciado
 		if(null == categorias) {
-			categorias = new Vector<Categoria>();
+			categorias = new Vector<CategoriaElementos>();
 		}
 		// Si la categoria no es Null añadirsela.
 		if(null != cat) {
@@ -44,7 +44,7 @@ public class Elemento {
 	 * Quita una categoria al producto
 	 * @param cat	Categoria a quitar
 	 */
-	public void quitaCategoria(Categoria cat) {
+	public void quitaCategoria(CategoriaElementos cat) {
 		// Comprobar si el vector está instanciado
 		if(null != categorias) {
 			categorias.remove(cat);
@@ -61,11 +61,11 @@ public class Elemento {
 		this.nombre = nombre;
 	}
 
-	public Vector<Categoria> getCategorias() {
+	public Vector<CategoriaElementos> getCategorias() {
 		return categorias;
 	}
 
-	public void setCategorias(Vector<Categoria> categorias) {
+	public void setCategorias(Vector<CategoriaElementos> categorias) {
 		this.categorias = categorias;
 	}
 
@@ -91,7 +91,7 @@ public class Elemento {
 		// las montamos en el formato Nombre/Abrev
 		if(null != categorias) {
 			sb.append(" (");
-			for(Categoria cat: categorias) {
+			for(CategoriaElementos cat: categorias) {
 				sb.append(" " + cat.getNombre() + "/" + cat.getAbreviatura());
 			}
 			sb.append(" )");
