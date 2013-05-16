@@ -9,7 +9,7 @@ public class EntradaLista {
 	 */
 	private Elemento elemento;
 	/**
-	 * Unidades en la que está expresada la cantidad
+	 * Unidades en la que estï¿½ expresada la cantidad
 	 */
 	private Unidad unidad;
 	/**
@@ -20,6 +20,11 @@ public class EntradaLista {
 	 * Fecha y hora en la que se ha dado de alta la entrada 
 	 */
 	private Date FechaHoraAlta;
+
+    /**
+     * Punto de venta donde se ha comprado el elemento
+     */
+    private Puntodeventa puntodeventa;
 	
 	
 	
